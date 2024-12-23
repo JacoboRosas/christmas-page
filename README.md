@@ -1,2 +1,1 @@
-# Página para alguien
-Regalo para Ari
+# This is but a simple page
