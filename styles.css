@@ -9,15 +9,20 @@
 }
 
 body{
+    overflow: auto;
     margin:0;
     padding:0;
-    overflow: hidden;
-    position: relative;
+    background: linear-gradient(to bottom right, #73ba9b, #d5f2e3);
+    background-color: #226f54;
+    padding-bottom: 50px; /* Inner space */
+    margin-bottom: 20px;  /* Outer space */
+
 }
+
 .flex-item-header
 {
-    width: autopx;     /* Set fixed width */
-    height: 750px;    /* Set fixed height */
+    width: auto;     /* Set fixed width */
+    height: 500px;    
     display:flex;
     flex-direction: column;
     background-color: #1E201E;
@@ -27,14 +32,56 @@ body{
     gap: 10px;
 }
 
-h1
-{
-    color:white;
-    font-size:80px;
+.bold{
+    color:#b7245c;
+    font-weight: bold;
+}
+
+.first-flex-container{
+    width: 1000px;     /* Set fixed width */
+    border: 2px solid black;
+    padding: 50px;
+    border-radius:25px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2); 
+    margin:auto;
+    justify-content: center;
+    /* Set fixed height */
+    display:flex;
+
+    background-color: #fdffff;
+    flex-flow: column wrap;
+    align-items: center;
+    gap: 10px;
+}
+
+.body-header h1{
+    color:#f33b3b;
+    font-size: 50px;
+    
     font-weight: bold;
     margin: 0;
     padding: 10px 0; 
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 
+}
+
+
+
+
+h1 
+{
+    color:white;
+    font-size: 60px;
+    font-weight: bold;
+    margin: 0;
+    padding: 10px 0; 
+}
+
+.inter{
+    font-size:20px;
+    text-indent:1em;  
+    text-align:justify;
+    font-weight: 450;
 }
 /* Fixed size div */
 .fixed-size-div {
@@ -43,16 +90,20 @@ h1
     justify-content: center;
     align-items: center;
   }
+
 .snowflake{
     position: absolute;
     top: -10px; /* Start above the screen */
     width: 10px;
     height: 10px;
-    background-color: white;
+    background-color: #FFFFF0;
     border-radius: 50%;
     opacity: 0.8;
     animation: fall linear infinite;
 }
+
+
+
 
 
 @keyframes fall {
@@ -100,6 +151,7 @@ h1
 /* Set the container's position and size */
 .flex-item-header {
     position: relative;
+    
     width: 100%;
     height: 750px; /* Adjust the height as needed */
     background-color: #222; /* Dark background for contrast */
@@ -151,3 +203,326 @@ h1
       opacity: 0;  /* Fade out completely */
     }
   }
+
+  .card-header h1{
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    color: #edf6f9;
+    font-size: 50px;
+    font-weight: bold;
+    margin: 0;
+    padding: 10px 0; 
+}
+
+
+
+
+.text-border{
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    color: #edf6f9;
+    font-size:16px;
+}
+
+  .wishes-section {
+    text-align: center;
+    padding: 40px;
+    background: linear-gradient(to bottom right, #ee2e31, #da2c38);
+    border:2px solid black;
+    background-color: #c20114; /* Light background */
+    border-radius: 10px; /* Smooth corners */
+    margin: 20px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2); 
+
+}
+
+
+
+.wish-list {
+    list-style-type: none;
+    padding: 0;
+    font-size: 1.5rem;
+    font-family: 'Georgia', serif; /* Slightly decorative font */
+    color: #fdffff; /* Neutral text color */
+}
+
+
+
+
+
+.wish-list li {
+    margin: 10px 0;
+    padding: 10px;
+    background: linear-gradient(to bottom right, #2dc653, #25a244);
+    border: 2px solid #bc6c25;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;}
+
+.wish-list li:hover {
+    transform: scale(1.05);
+    background: linear-gradient(to bottom right, #4ad66d, #4ad66d); /* Light red background on hover */
+
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2); /* Add a stronger shadow */
+}
+
+.wish-list li.revealed .hidden-text {
+    visibility: visible; /* Reveal the text */
+    opacity: 1; /* Fully visible */
+}
+
+
+.hidden-text {
+    visibility: hidden; /* Completely hide the text */
+    opacity: 0; /* Make it invisible */
+    transition: opacity 0.3s ease, visibility 0.3s ease; /* Smooth transition */
+}
+
+/* Section styling */
+.image-cards-section {
+    padding: 40px;
+    justify-content: center; /* Center the cards horizontally */
+    align-items: center; /* Center the cards vertically */
+    background: linear-gradient(to bottom right, #2dc653, #25a244);
+    text-align: center;
+    border: 2px solid;
+    border-radius: 24px;
+}
+
+/* Container for all the cards */
+.image-cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.image-header h1{
+    color:white;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    justify-content: center; /* Center the cards horizontally */
+    align-items: center; /* Center the cards vertically */
+    text-align: center;
+    border-radius: 24px;
+}
+/* Styling for individual cards */
+.image-card {
+    background: linear-gradient(to bottom right, #ee2e31, #da2c38);
+    border:2px solid;
+    width: calc(33.333% - 20px); /* 3 cards per row */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+
+.image-cards-section #image-title {
+    color: #fad643;
+    font-size: 32;
+    text-align: center;
+    margin: 0;
+    padding: 10px 0;
+
+}
+
+
+/* Hover effect for the cards */
+.image-card:hover {
+    transform: scale(1.03);
+    background: linear-gradient(to bottom right, #e05c6f, #ff5555); /* Light red background on hover */
+
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Container for the image to add padding */
+.image-card-img-container {
+    padding: 10px;
+}
+
+/* Image styling */
+.image-card-img {
+    width: 100%;
+    height: auto;
+    display: block; /* To remove any extra space below the image */
+    border-radius: 8px;
+}
+
+/* Description section styling */
+.image-card-description {
+    padding: 20px;
+    text-align: center; /* Center the text horizontally */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center text vertically */
+}
+
+/* Styling for title */
+.image-card-description h3 {
+    margin: 0;
+    color: #ffffffe0;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-align: center; /* Center title text */
+}
+
+/* Styling for description text */
+.image-card-description p {
+    margin-top: 10px;
+    color: #ffffffe0;
+    font-size: 1em;
+    text-align: center; /* Center description text */
+}
+
+/* Modal overlay styling */
+/* Modal overlay styling */
+.overlay {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Modal box (containing the image and the close button) */
+.modal-box {
+    position: relative;
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    border-radius: 10px;
+    display: inline-block;
+    max-width: 90%;
+    max-height: 90%;
+}
+
+/* Expanded image styling */
+.expanded-img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+/* Close button styling inside the modal box */
+.close-btn {
+    position: absolute;
+    top: -10px; /* Adjusted to ensure the button doesn't overlap with the image */
+    right: -10px; /* Adjusted to keep the button within the box */
+    font-size: 30px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 50%; /* Full circle */
+    width: 40px; /* Circle size */
+    height: 40px; /* Circle size */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+
+.close-btn:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 900px) {
+    .image-card {
+        width: calc(50% - 20px); /* Two cards per row on smaller screens */
+    }
+}
+
+@media (max-width: 600px) {
+    .image-card {
+        width: 100%; /* One card per row on very small screens */
+    }
+}
+
+/* Gift Countdown Section */
+.gift-countdown-section {
+    background-color: #141414; /* Black background */
+    color: #FFD700; /* Yellow text */
+    text-align: center;
+    padding: 40px;
+    font-family: 'Arial', sans-serif;
+}
+#gift-countdown-container #gift-title {
+    color: #fad643;
+    font-size: 32;
+    text-align: center;
+    margin: 0;
+    padding: 10px 0;
+
+}
+
+/* Expand container width and center it */
+.gift-countdown-section {
+    width: 800px; /* Adjust the width */
+    border: 3px solid #e6a61d; /* Yellow border around the section */
+    border-radius: 5px; /* Optional: Rounded corners for the border */
+    padding: 30px;
+}
+
+.gift-countdown-timer {
+    font-size: 3em;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #ffc300; /* Yellow text for the timer */
+}
+
+/* Styling for the letter section */
+.letter-section {
+    background-color: #333; /* Darkish background */
+    color: #fff; /* White text for contrast */
+    border-radius: 10px; /* Rounded corners for the container */
+    padding: 20px 20px;
+    text-align: justify;
+  }
+  
+  .letter-container {
+    width: 700px; /* Limit the width of the letter content */
+    margin: 0 auto; /* Center the content */
+    background-color: rgba(0, 0, 0, 0.5); /* Slight dark background for the container */
+    padding: 30px;
+    border-radius: 10px; /* Rounded corners for the container */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Soft shadow effect */
+  }
+  
+  .letter-container h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    text-align: center; 
+  }
+  
+  .letter-container p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+  /* Align the last <p> to the left */
+.letter-container p:last-of-type {
+    text-align: center;
+  }
+  
+  /* Optional responsive design for smaller screens */
+  @media (max-width: 600px) {
+    .letter-container {
+      padding: 20px;
+    }
+  
+    .letter-container h2 {
+      font-size: 1.5em;
+    }
+  
+    .letter-container p {
+      font-size: 1em;
+    }
+  }
+
+

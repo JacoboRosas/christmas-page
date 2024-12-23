@@ -206,3 +206,86 @@ function updateCountdown() {
 const interval = setInterval(updateCountdown, 1000);
 updateCountdown();
 
+
+
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    const wishes = document.querySelectorAll(".wish-list li");
+
+    wishes.forEach(wish => {
+        wish.addEventListener("click", () => {
+            // Toggle the 'revealed' class on click
+            if (!wish.classList.contains("revealed")) {
+                wish.classList.add("revealed");
+            }
+        });
+    });
+});
+
+
+
+
+
+// Get all the image elements
+const images = document.querySelectorAll('.image-card-img');
+
+// Get the modal (overlay) and the expanded image
+const overlay = document.getElementById('overlay');
+const expandedImg = document.getElementById('expanded-img');
+const closeBtn = document.getElementById('close-btn');
+
+// Add click event listeners to each image
+images.forEach(img => {
+    img.addEventListener('click', function () {
+        // Set the src of the expanded image to the clicked image's src
+        expandedImg.src = this.src;
+        // Display the overlay
+        overlay.style.display = 'flex';
+    });
+});
+
+// Close the modal when the close button is clicked
+closeBtn.addEventListener('click', function () {
+    overlay.style.display = 'none';
+});
+
+// Close the modal when clicking outside the modal box (on the overlay)
+overlay.addEventListener('click', function (event) {
+    // Check if the click is outside the image (on the overlay)
+    if (event.target === overlay) {
+        overlay.style.display = 'none'; // Close the modal
+    }
+});
+
+
+// New Countdown for the Gift
+const giftTargetDate = new Date('December 24, 2024 16:00:00 GMT').getTime();
+const peruGiftOffset = 5 * 60 * 60 * 1000; // 5 hours in milliseconds
+const giftTargetDatePET = giftTargetDate + peruGiftOffset;
+
+function updateGiftCountdown() {
+  const currentTime = new Date().getTime(); // Get current time in local timezone
+  const timeRemaining = giftTargetDatePET - currentTime; // Calculate time difference from Peru time
+
+  const daysLeft = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+  const hoursLeft = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  const minutesLeft = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+  const secondsLeft = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+
+  const giftCountdownElement = document.getElementById('gift-countdown');
+  giftCountdownElement.innerHTML = `${daysLeft}d ${hoursLeft}h ${minutesLeft}m ${secondsLeft}s`;
+
+  if (timeRemaining < 0) {
+    clearInterval(giftInterval);
+    document.getElementById('gift-title').style.display = 'none';
+
+    document.querySelectorAll('.remove-text').forEach(el => el.style.display = 'none');
+    giftCountdownElement.innerHTML = "🎁¡Revisa Steam!🎁";
+  }
+}
+
+const giftInterval = setInterval(updateGiftCountdown, 1000);
+updateGiftCountdown();
+
