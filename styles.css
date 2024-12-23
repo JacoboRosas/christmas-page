@@ -1,0 +1,153 @@
+:root 
+{
+    font-family: Inter, sans-serif;
+    font-feature-settings: 'liga' 1, 'calt' 1; /* fix for Chrome */
+}
+@supports 
+(font-variation-settings: normal) {
+    :root { font-family: InterVariable, sans-serif; }
+}
+
+body{
+    margin:0;
+    padding:0;
+    overflow: hidden;
+    position: relative;
+}
+.flex-item-header
+{
+    width: autopx;     /* Set fixed width */
+    height: 750px;    /* Set fixed height */
+    display:flex;
+    flex-direction: column;
+    background-color: #1E201E;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+h1
+{
+    color:white;
+    font-size:80px;
+    font-weight: bold;
+    margin: 0;
+    padding: 10px 0; 
+
+}
+/* Fixed size div */
+.fixed-size-div {
+    background-color: lightblue; /* Just for visibility */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+.snowflake{
+    position: absolute;
+    top: -10px; /* Start above the screen */
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 50%;
+    opacity: 0.8;
+    animation: fall linear infinite;
+}
+
+
+@keyframes fall {
+    0% {
+      transform: translateX(0) translateY(0) rotate(0deg);
+      opacity: 0.9;
+    }
+    25% {
+      transform: translateX(30px) translateY(25vh) rotate(90deg); /* Move further to the right */
+    }
+    50% {
+      transform: translateX(-30px) translateY(50vh) rotate(180deg); /* Move further to the left */
+    }
+    75% {
+      transform: translateX(30px) translateY(75vh) rotate(270deg); /* Move back to the right */
+    }
+    100% {
+      transform: translateX(-30px) translateY(100vh) rotate(360deg); /* End further to the left */
+      opacity: 0.6;
+    }
+  }
+
+.gradiant-header
+{
+    background: linear-gradient(45deg, #b9ff8a, #23ff52);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.gradient-red {
+    background: linear-gradient(to right, #ff1e56, #ff5e5b, #ff8b88);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+}
+
+.gradient-timer {
+    background: linear-gradient(to right, #ff1e56, #ff5e5b, #ff8b88); /* Heart-like gradient */
+    -webkit-background-clip: text; /* Clipping gradient to text */
+    -webkit-text-fill-color: transparent; /* Makes gradient visible */
+    color: transparent; /* Fallback for non-supported browsers */
+}
+
+  
+/* Set the container's position and size */
+.flex-item-header {
+    position: relative;
+    width: 100%;
+    height: 750px; /* Adjust the height as needed */
+    background-color: #222; /* Dark background for contrast */
+    overflow: hidden; /* Prevent particles from overflowing */
+  }
+  
+/* Style for the fireworks (initial state) */
+.firework {
+    position: absolute;
+    bottom: 0; /* Start from the bottom */
+    left: 50%; /* Start at the center horizontally */
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    animation: fireworkUp 2s ease-out forwards; /* Animation for upward movement */
+  }
+
+/* Animation for moving fireworks up with an angle */
+@keyframes fireworkUp {
+    to {
+        transform: translateY(var(--travel-distance)) translateX(var(--horizontal-offset)); /* Move firework up and add horizontal movement */
+    }
+}
+  
+/* Explosion particle styling */
+.particle {
+    position: absolute;
+    width: 6px;  /* Smaller particle size */
+    height: 6px;  /* Smaller particle size */
+    border-radius: 50%;
+    opacity: 0;
+    pointer-events: none;
+    animation: explode 1s forwards ease-out; /* Smooth animation */
+    box-shadow: 0 0 4px 1px rgba(255, 255, 255, 0.5); /* Subtle glow */
+  }
+  
+  /* Explosion animation */
+  @keyframes explode {
+    0% {
+      transform: scale(1) translate(0, 0);
+      opacity: 1;
+    }
+    50% {
+      transform: scale(1.5) translate(var(--x), var(--y)); /* Slight expansion */
+      opacity: 0.7;  /* Slight transparency */
+    }
+    100% {
+      transform: scale(2) translate(var(--x), var(--y)); /* Expand further */
+      opacity: 0;  /* Fade out completely */
+    }
+  }
