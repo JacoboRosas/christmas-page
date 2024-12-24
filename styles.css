@@ -16,16 +16,16 @@ body{
     background-color: #226f54;
     padding-bottom: 50px; /* Inner space */
     margin-bottom: 20px;  /* Outer space */
-
 }
 
 .flex-item-header
 {
-    width: auto;     /* Set fixed width */
-    height: 500px;    
+    --angle: 45deg; 
+    background: linear-gradient(var(--angle), oklab(24.1% -0.014 -0.08), oklab(27.4% 0.066 -0.118));
+    width: 100%;     /* Set fixed width */
+    height: 100vh   !important;
     display:flex;
     flex-direction: column;
-    background-color: #1E201E;
     flex-flow: column wrap;
     justify-content: center;
     align-items: center;
