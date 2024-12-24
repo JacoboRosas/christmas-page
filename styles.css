@@ -232,30 +232,38 @@ h1
     font-weight: bold;
     margin: 0;
     padding: 10px 0; 
+    letter-spacing: 2px; /* Add spacing for a more elegant look */
+    text-transform: uppercase; /* Uppercase for emphasis */
+    transition: color 0.3s ease, transform 0.3s ease; /* Smooth transitions */
 }
 
-
-
+.card-header h1:hover {
+    color: #ffcc00; /* Change color on hover for emphasis */
+    transform: scale(1.1); /* Slightly enlarge on hover */
+}
 
 .text-border{
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
     color: #edf6f9;
-    font-size:16px;
+    font-size: 16px;
+    letter-spacing: 1px; /* Letter spacing for better readability */
 }
 
-  .wishes-section {
+.wishes-section {
     text-align: center;
     padding: 40px;
     background: linear-gradient(to bottom right, #ee2e31, #da2c38);
-    border:2px solid black;
-    background-color: #c20114; /* Light background */
-    border-radius: 10px; /* Smooth corners */
+    border: 2px solid black;
+    background-color: #c20114; /* Stronger background color */
+    border-radius: 12px; /* Slightly rounded corners for a softer feel */
     margin: 20px;
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2); 
-
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s ease; /* Smooth shadow transition */
 }
 
-
+.wishes-section:hover {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); /* Enhance shadow on hover */
+}
 
 .wish-list {
     list-style-type: none;
@@ -263,27 +271,26 @@ h1
     font-size: 1.5rem;
     font-family: 'Georgia', serif; /* Slightly decorative font */
     color: #fdffff; /* Neutral text color */
+    padding: 20px;
 }
 
-
-
-
-
 .wish-list li {
-    margin: 10px 0;
-    padding: 10px;
+    margin: 12px 0;
+    padding: 15px;
     background: linear-gradient(to bottom right, #2dc653, #25a244);
     border: 2px solid #bc6c25;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;}
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
 
 .wish-list li:hover {
     transform: scale(1.05);
-    background: linear-gradient(to bottom right, #4ad66d, #4ad66d); /* Light red background on hover */
-
-    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2); /* Add a stronger shadow */
+    background: linear-gradient(to bottom right, #4ad66d, #4ad66d); /* Light green background on hover */
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2); /* Stronger shadow */
+    background: linear-gradient(to bottom right, #ffab00, #ff5f00); /* New hover color for more contrast */
+    color: #fff; /* Change text color for contrast */
 }
 
 .wish-list li.revealed .hidden-text {
@@ -291,11 +298,17 @@ h1
     opacity: 1; /* Fully visible */
 }
 
-
 .hidden-text {
-    visibility: hidden; /* Completely hide the text */
+    visibility: hidden; /* Initially hide the text */
     opacity: 0; /* Make it invisible */
     transition: opacity 0.3s ease, visibility 0.3s ease; /* Smooth transition */
+}
+
+/* Adding a hover effect on the text itself */
+.wish-list li:hover .hidden-text {
+    visibility: visible; /* Text becomes visible on hover */
+    opacity: 1; /* Text becomes fully visible */
+    transform: translateY(5px); /* Slight upward movement for effect */
 }
 
 /* Section styling */
