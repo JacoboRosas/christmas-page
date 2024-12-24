@@ -260,11 +260,12 @@ h1
     text-align: center;
     padding: 40px;
     --angle: 45deg; ;
-    background: linear-gradient(var(--angle), oklab(49.7% 0.16 0.081), oklab(53.3% 0.169 0.084), oklab(56.9% 0.177 0.087), oklab(60.5% 0.184 0.089), oklab(64% 0.192 0.092));
     border: 2px solid black;
     background-color: #eeebf3;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='12' viewBox='0 0 20 12'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='charlie-brown' fill='%23ffffff' fill-opacity='0.4'%3E%3Cpath d='M9.8 12L0 2.2V.8l10 10 10-10v1.4L10.2 12h-.4zm-4 0L0 6.2V4.8L7.2 12H5.8zm8.4 0L20 6.2V4.8L12.8 12h1.4zM9.8 0l.2.2.2-.2h-.4zm-4 0L10 4.2 14.2 0h-1.4L10 2.8 7.2 0H5.8z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");    
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='12' viewBox='0 0 20 12'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='charlie-brown' fill='%23ffffff' fill-opacity='0.4'%3E%3Cpath d='M9.8 12L0 2.2V.8l10 10 10-10v1.4L10.2 12h-.4zm-4 0L0 6.2V4.8L7.2 12H5.8zm8.4 0L20 6.2V4.8L12.8 12h1.4zM9.8 0l.2.2.2-.2h-.4zm-4 0L10 4.2 14.2 0h-1.4L10 2.8 7.2 0H5.8z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"), linear-gradient(var(--angle), oklab(59.3% 0.217 0.064), oklab(52.9% 0.199 0.074));  
     background-color: #c20114; /* Stronger background color */
+    --angle: 45deg; 
+
     border-radius: 12px; /* Slightly rounded corners for a softer feel */
     margin: 20px;
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
@@ -322,8 +323,10 @@ h1
 
 /* Section styling */
 .image-cards-section {
+    background-color: #DFDBE5;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%239C92AC' fill-opacity='1' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E"), linear-gradient(var(--angle), oklab(55.2% -0.127 0.065), oklab(59.1% -0.133 0.063), oklab(62.9% -0.139 0.061), oklab(66.7% -0.145 0.059), oklab(70.4% -0.15 0.056));
     --angle: 45deg; 
-    background: linear-gradient(var(--angle), oklab(55.2% -0.127 0.065), oklab(59.1% -0.133 0.063), oklab(62.9% -0.139 0.061), oklab(66.7% -0.145 0.059), oklab(70.4% -0.15 0.056)); 
+    background: ; 
     padding: 40px;
     justify-content: center; /* Center the cards horizontally */
     align-items: center; /* Center the cards vertically */
@@ -362,7 +365,7 @@ h1
 .image-card {
     
     --angle: 45deg; 
-    background: linear-gradient(var(--angle), oklab(37.7% 0.135 0.075), oklab(52.6% 0.159 0.106));
+    background: linear-gradient(var(--angle), oklab(59.3% 0.217 0.064), oklab(52.9% 0.199 0.074));
     border:0.25px solid;
     width: calc(33.333% - 20px); /* 3 cards per row */
     border-radius: 10px;
