@@ -55,7 +55,7 @@ body{
 /* Flexbox container for content */
 .first-flex-container {
     width: 50vh; /* Make it full width to prevent overflow */
-    max-width: 800px; /* Max width to avoid excessive stretching */
+    max-width: 1200px; /* Max width to avoid excessive stretching */
     margin: auto; /* Center the container */
     padding: 50px;
     background-color: #fdffff;
@@ -252,7 +252,8 @@ h1
 .wishes-section {
     text-align: center;
     padding: 40px;
-    background: linear-gradient(to bottom right, #ee2e31, #da2c38);
+    --angle: 45deg; ;
+    background: linear-gradient(var(--angle), oklab(49.7% 0.16 0.081), oklab(53.3% 0.169 0.084), oklab(56.9% 0.177 0.087), oklab(60.5% 0.184 0.089), oklab(64% 0.192 0.092));
     border: 2px solid black;
     background-color: #c20114; /* Stronger background color */
     border-radius: 12px; /* Slightly rounded corners for a softer feel */
@@ -316,7 +317,8 @@ h1
     padding: 40px;
     justify-content: center; /* Center the cards horizontally */
     align-items: center; /* Center the cards vertically */
-    background: linear-gradient(to bottom right, #2dc653, #25a244);
+    --angle: 45deg; 
+    background: linear-gradient(var(--angle), oklab(55.2% -0.127 0.065), oklab(59.1% -0.133 0.063), oklab(62.9% -0.139 0.061), oklab(66.7% -0.145 0.059), oklab(70.4% -0.15 0.056));  
     text-align: center;
     border: 2px solid;
     border-radius: 24px;
@@ -340,8 +342,9 @@ h1
 }
 /* Styling for individual cards */
 .image-card {
-    background: linear-gradient(to bottom right, #ee2e31, #da2c38);
-    border:2px solid;
+    --angle: 45deg; 
+    background: linear-gradient(var(--angle), oklab(37.7% 0.135 0.075), oklab(52.6% 0.159 0.106));
+        border:2px solid;
     width: calc(33.333% - 20px); /* 3 cards per row */
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -487,7 +490,7 @@ h1
 
 /* Expand container width and center it */
 .gift-countdown-section {
-    width: 800px; /* Adjust the width */
+    width: 95%; /* Adjust the width */
     border: 3px solid #e6a61d; /* Yellow border around the section */
     border-radius: 5px; /* Optional: Rounded corners for the border */
     padding: 30px;
@@ -503,14 +506,15 @@ h1
 /* Styling for the letter section */
 .letter-section {
     background-color: #333; /* Darkish background */
+    width: 75%;
     color: #fff; /* White text for contrast */
     border-radius: 10px; /* Rounded corners for the container */
-    padding: 20px 20px;
+    padding: 20px 1px;
     text-align: justify;
   }
   
   .letter-container {
-    width: 700px; /* Limit the width of the letter content */
+    width: 95%; /* Limit the width of the letter content */
     margin: 0 auto; /* Center the content */
     background-color: rgba(0, 0, 0, 0.5); /* Slight dark background for the container */
     padding: 30px;
@@ -587,7 +591,7 @@ h1
 @media (max-width: 768px) {
     .first-flex-container {
         width: 90%;      /* Makes it take up 90% of the screen width on smaller screens */
-        max-width: 400px; /* Set a smaller max-width for smaller screens */
+        max-width: 600; /* Set a smaller max-width for smaller screens */
         padding: 20px;    }
 
     .body-header h1 {
