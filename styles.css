@@ -573,8 +573,9 @@ h1
 }
 @media (max-width: 768px) {
     .first-flex-container {
-        padding: 20px; /* Less padding on smaller screens */
-    }
+        width: 90%;      /* Makes it take up 90% of the screen width on smaller screens */
+        max-width: 400px; /* Set a smaller max-width for smaller screens */
+        padding: 20px;    }
 
     .body-header h1 {
         font-size: clamp(2rem, 10vw, 3rem); /* Make header smaller on small screens */
