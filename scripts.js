@@ -261,7 +261,7 @@ overlay.addEventListener('click', function (event) {
 
 
 // New Countdown for the Gift
-const giftTargetDate = new Date('December 24, 2024 16:00:00 GMT').getTime();
+const giftTargetDate = new Date('December 24, 2024 20:00:00 GMT').getTime();
 const peruGiftOffset = 5 * 60 * 60 * 1000; // 5 hours in milliseconds
 const giftTargetDatePET = giftTargetDate + peruGiftOffset;
 
