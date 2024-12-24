@@ -36,7 +36,6 @@ body{
     background-position: center; /* Centers the background image */
     background-repeat: no-repeat; /* Prevents the background from repeating */
     width: 100% !important;
-    overflow: hidden; /* Hides content spilling out */
     height: 100vh   !important;
     display:flex;
     flex-direction: column;
@@ -45,31 +44,30 @@ body{
     align-items: center;
     gap: 10px;
 }
-@media (max-width: 600px) {
-    .flex-item-header h1 {
-        font-size: 1.5rem; /* Smaller font size for extra small screens */
-    }
-}
+
+
+
 .bold{
     color:#b7245c;
     font-weight: bold;
 }
 
-.first-flex-container{
-    width: 1000px;     /* Set fixed width */
-    border: 2px solid black;
+/* Flexbox container for content */
+.first-flex-container {
+    width: 50vh; /* Make it full width to prevent overflow */
+    max-width: 800px; /* Max width to avoid excessive stretching */
+    margin: auto; /* Center the container */
     padding: 50px;
-    border-radius:25px;
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2); 
-    margin:auto;
-    justify-content: center;
-    /* Set fixed height */
-    display:flex;
-
     background-color: #fdffff;
-    flex-flow: column wrap;
+    border-radius: 25px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    gap: 10px;
+    gap: 20px;
+    text-align: center;
+    overflow: hidden; /* Prevent overflow */
+    width: 100%;
 }
 
 .body-header h1{
@@ -95,11 +93,16 @@ h1
     padding: 10px 0; 
 }
 
-.inter{
-    font-size:20px;
-    text-indent:1em;  
-    text-align:justify;
+/* Inter paragraph class for text formatting */
+.inter {
+    font-size: 1.25rem; /* Slightly larger than default for better readability */
     font-weight: 450;
+    text-align: justify;
+    text-indent: 1em;
+    color: #333; /* Darker color for readability */
+    line-height: 1.6; /* Spacing between lines for better text flow */
+    max-width: 800px; /* Prevents text from becoming too wide on larger screens */
+    margin: 0 auto; /* Center the paragraph */
 }
 /* Fixed size div */
 .fixed-size-div {
@@ -450,17 +453,7 @@ h1
 }
 
 /* Responsive Design for Smaller Screens */
-@media (max-width: 900px) {
-    .image-card {
-        width: calc(50% - 20px); /* Two cards per row on smaller screens */
-    }
-}
 
-@media (max-width: 600px) {
-    .image-card {
-        width: 100%; /* One card per row on very small screens */
-    }
-}
 
 /* Gift Countdown Section */
 .gift-countdown-section {
@@ -544,3 +537,51 @@ h1
   }
 
 
+  @media (max-width: 600px) {
+    .flex-item-header h1 {
+        font-size: 1.5rem; /* Smaller font size for extra small screens */
+    }
+/* Adjust for responsive typography and spacing */
+@media (max-width: 768px) {
+    .first-flex-container {
+        padding: 20px; /* Less padding on smaller screens */
+    }
+
+    .body-header h1 {
+        font-size: clamp(2rem, 10vw, 3rem); /* Make header smaller on small screens */
+    }
+
+    .inter {
+        font-size: 1rem; /* Reduce font size on smaller screens */
+        padding: 10px; /* Add some padding for readability */
+    }
+}
+    
+}
+
+
+@media (max-width: 900px) {
+    .image-card {
+        width: calc(50% - 20px); /* Two cards per row on smaller screens */
+    }
+}
+
+@media (max-width: 600px) {
+    .image-card {
+        width: 100%; /* One card per row on very small screens */
+    }
+}
+@media (max-width: 768px) {
+    .first-flex-container {
+        padding: 20px; /* Less padding on smaller screens */
+    }
+
+    .body-header h1 {
+        font-size: clamp(2rem, 10vw, 3rem); /* Make header smaller on small screens */
+    }
+
+    .inter {
+        font-size: 1rem; /* Reduce font size on smaller screens */
+        padding: 10px; /* Add some padding for readability */
+    }
+}
