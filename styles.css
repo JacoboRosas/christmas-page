@@ -26,7 +26,7 @@ body{
 {
     --angle: 45deg; 
     background: linear-gradient(var(--angle), oklab(24.1% -0.014 -0.08), oklab(27.4% 0.066 -0.118));
-    width: 100%;     /* Set fixed width */
+    width: 100% !important;
     height: 100vh   !important;
     display:flex;
     flex-direction: column;
