@@ -21,9 +21,15 @@ body{
     padding-bottom: 50px; /* Inner space */
     margin-bottom: 20px;  /* Outer space */
 }
-
+.flex-item-header h1 {
+    font-size: clamp(2rem, 5vw, 4rem); /* Scales between 2rem and 4rem based on viewport width */
+    text-align: center;
+    margin: 0;
+    padding: 10px 0;
+}
 .flex-item-header
 {
+    font-size: clamp(2rem, 5vw, 4rem); /* Scales between 2rem and 4rem based on viewport width */
     --angle: 45deg; 
     background: linear-gradient(var(--angle), oklab(24.1% -0.014 -0.08), oklab(27.4% 0.066 -0.118));
     width: 100% !important;
@@ -35,7 +41,11 @@ body{
     align-items: center;
     gap: 10px;
 }
-
+@media (max-width: 600px) {
+    .flex-item-header h1 {
+        font-size: 1.5rem; /* Smaller font size for extra small screens */
+    }
+}
 .bold{
     color:#b7245c;
     font-weight: bold;
