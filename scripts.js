@@ -168,7 +168,7 @@ function createSnowflakes() {
 
 
 //Countdown
-const targetDate = new Date('December 25, 2024 00:00:00 GMT').getTime();
+const targetDate = new Date('December 22, 2024 00:00:00 GMT').getTime();
 
 const peruOffset = 5 * 60 * 60 * 1000; // 5 hours in milliseconds
 const targetDatePET = targetDate + peruOffset;

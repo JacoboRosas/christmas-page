@@ -19,7 +19,6 @@ body{
     background: linear-gradient(to bottom right, #73ba9b, #d5f2e3);
     background-color: #d5f2e3;
     background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23fefefe' fill-opacity='0.4' fill-rule='evenodd'/%3E%3C/svg%3E");
-    
     padding-bottom: 50px; /* Inner space */
     margin-bottom: 20px;  /* Outer space */
 }
@@ -257,6 +256,7 @@ h1
 }
 
 .wishes-section {
+    position: relative;
     text-align: center;
     padding: 40px;
     --angle: 45deg; ;
@@ -323,6 +323,7 @@ h1
 
 /* Section styling */
 .image-cards-section {
+    position: relative;
     background-color: #DFDBE5;
     background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffdd00' fill-opacity='0.5' fill-rule='evenodd'%3E%3Cpath d='M0 40L40 0H20L0 20M40 40V20L20 40'/%3E%3C/g%3E%3C/svg%3E"), linear-gradient(var(--angle), oklab(55.2% -0.127 0.065), oklab(59.1% -0.133 0.063), oklab(62.9% -0.139 0.061), oklab(66.7% -0.145 0.059), oklab(70.4% -0.15 0.056));
     --angle: 45deg; 
@@ -339,6 +340,7 @@ h1
 
 /* Container for all the cards */
 .image-cards-container {
+
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
@@ -643,4 +645,60 @@ h1
     margin-top: 20px; /* Adjust the value as needed */
 }
 
+.emoji-ribbon {
+    position: absolute; /* Anchor it to the container */
+    top: -70px; /* Adjust positioning */
+    right: -80px;
+    font-size:9rem; /* Make the emoji larger */
+    transform: rotate(30deg); /* Rotate it to give an angled appearance */
+    filter: hue-rotate(340deg) brightness(1.2); /* Change color and add brightness */
+    z-index: 2; /* Ensure it stays above other elements */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Adding a black border effect */
 
+}
+
+/* Responsive adjustments for smaller screens */
+@media screen and (max-width: 768px) {
+    .emoji-ribbon {
+        top: -70px; /* Adjust vertical position */
+        right: -60px; /* Adjust horizontal position */
+        font-size: 7rem; /* Smaller emoji size */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .emoji-ribbon {
+        top: -50px; /* Further adjust vertical position */
+        right: -40px; /* Further adjust horizontal position */
+        font-size: 5rem; /* Even smaller emoji size */
+    }
+}
+
+.emoji-ribbon2 {
+    position: absolute; /* Anchor it to the container */
+    top: -70px; /* Adjust positioning */
+    left: -70px;
+    font-size:9rem; /* Make the emoji larger */
+    transform: rotate(-30deg); /* Rotate it to give an angled appearance */
+    filter: hue-rotate(250deg) brightness(1.2); /* Change color and add brightness */
+    z-index: 2; /* Ensure it stays above other elements */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Adding a black border effect */
+
+}
+
+/* Responsive adjustments for smaller screens */
+@media screen and (max-width: 768px) {
+    .emoji-ribbon2 {
+        top: -50px; /* Adjust vertical position */
+        left: -40px; /* Adjust horizontal position */
+        font-size: 6rem; /* Smaller emoji size */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .emoji-ribbon2 {
+        top: -40px; /* Further adjust vertical position */
+        left: -30px; /* Further adjust horizontal position */
+        font-size: 4rem; /* Even smaller emoji size */
+    }
+}
